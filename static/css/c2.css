@@ -1,0 +1,14 @@
+td{
+    text-align: center;
+}
+h1{
+    color:green;
+}
+#one:hover{
+   background-color: rgb(220, 20, 117);
+  
+}
+#two:hover{
+    background-color: cyan;
+    
+}

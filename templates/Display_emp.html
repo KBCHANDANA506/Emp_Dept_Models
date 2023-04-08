@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display_employee</title>
+    <link rel="stylesheet" href="{% static 'css/c2.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Display_employee</h1>
+        <table border="2">
+            <tr id="one">
+                <th>EMPNO</th>
+                <th>ENAME</th>
+                <th>JOB</th>
+                <th>MGR</th>
+                <th>HIREDATE</th>
+                <th>SAL</th>
+                <th>COMM</th>
+                <th>DEPTNO</th>
+            </tr>
+            {% for ET in emp %}
+            <tr id="two">
+                <td>{{ET.EMPNO}}</td>
+                <td>{{ET.ENAME}}</td>
+                <td>{{ET.JOB}}</td>
+                <td>{{ET.MGR}}</td>
+                <td>{{ET.HIREDATE}}</td>
+                <td>{{ET.SAL}}</td>
+                <td>{{ET.COMM}}</td>
+                <td>{{ET.DEPTNO.DEPTNO}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
